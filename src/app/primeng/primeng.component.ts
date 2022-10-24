@@ -51,7 +51,7 @@ export class PrimengComponent implements OnInit {
         message: 'Are you sure that you want to proceed?',
         icon: 'pi pi-exclamation-triangle',
         accept: () => {
-          this.messageService.add({severity:'info', summary:'Confirmed', detail:'You have accepted'});
+          this.messageService.add({severity:'success', summary:'Confirmed', detail:'You have accepted'});
         },
         reject: () => {
             this.messageService.add({severity:'error', summary:'Rejected', detail:'You have rejected'});
