@@ -8,6 +8,10 @@ import { PrimengComponent } from './primeng/primeng.component';
 import {TableModule} from 'primeng/table';
 import {CardModule} from 'primeng/card';
 import {ButtonModule} from 'primeng/button';
+import {ConfirmPopupModule} from 'primeng/confirmpopup';
+import {ConfirmationService, MessageService} from 'primeng/api';
+import {ToastModule} from 'primeng/toast';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -20,9 +24,12 @@ import {ButtonModule} from 'primeng/button';
     AppRoutingModule,
     TableModule,
     CardModule,
-    ButtonModule
+    ButtonModule,
+    ConfirmPopupModule,
+    ToastModule,
+    BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [ConfirmationService,MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
